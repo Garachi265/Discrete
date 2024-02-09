@@ -86,30 +86,25 @@ Indian Institute of Technology Hyderabad
 
 
 
+\begin{table}[htbp]
+\centering
+\resizebox{\columnwidth}{!}{
+\input{table/table2.tex}}
+\caption{ Given Parameters}
+
+\end{table}
 
 
 
-To find the $Z$-transform of a sequence, we use the formula:
-\begin{align}
-X(z) = \sum_{n=0}^{\infty} x[n] \cdot z^{-n} 
-\end{align}
 
-Given the sequence $a_n = (-1)^{n-1} \cdot 5^{n+1}$, we can substitute this into the formula:
-\begin{align}
-A(z) &= \sum_{n=0}^{\infty} (-1)^{n-1} \cdot 5^{n+1} \cdot z^{-n} \\ 
- &= \sum_{n=0}^{\infty} (-1)^{n-1} \cdot \frac{5^{n+1}}{z^n} 
-\end{align}
-Now, let's split the summation into two parts, one for even values of $n$ and one for odd values of $n$:
-\begin{align}
- A(z) &= \sum_{n=0}^{\infty} (-1)^{n-1} \cdot \frac{5^{n+1}}{z^n} \\
-  &= \sum_{k=0}^{\infty} (-1)^{2k-1} \cdot \frac{5^{2k+1}}{z^{2k}} + \sum_{k=0}^{\infty} (-1)^{2k} \cdot \frac{5^{2k+2}}{z^{2k+1}} \\
- &= -\sum_{k=0}^{\infty} \frac{5^{2k+1}}{z^{2k}} + \sum_{k=0}^{\infty} \frac{5^{2k+2}}{z^{2k+1}} \\
-&= -5\sum_{k=0}^{\infty} \left(\frac{5}{z}\right)^{2k} + 5\sum_{k=0}^{\infty} \left(\frac{5}{z}\right)^{2k+1} \\
-&=\dfrac{-5}{1 - 25 \times z^{-2}} + \dfrac{25 \times z^{-1}}{1 - 25 \times z^{-2}} \\
-&=\dfrac{-5 \times z}{z+5} \\
-\end{align}
+The Z-transform of a sequence $x(n)$ is given by:
 
-This result is valid for R.O.C. $\left| \dfrac{5 }{ z }\right| < 1$ \\
+ \begin{align}
+	     x(n) &= (-1)^{n-1}5^{n+1}u(n)
+	       \\  X(Z) &= \dfrac{-5z}{z+5}; 
+ \end{align}
+
+This result is valid for R.O.C. 
 \begin{align}
 |z| > 5
 \end{align}
@@ -118,29 +113,9 @@ This result is valid for R.O.C. $\left| \dfrac{5 }{ z }\right| < 1$ \\
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.5\textwidth]{grasi2.png} 
+  \includegraphics[width=0.5\textwidth]{figures/grasi2.png} 
  
 \end{figure}
-
-The $Z$-transform of the given sequence $a_n$ is $A(z)$ as derived above.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 The $n^{th}$ term of sequence is: $x(n) = (-1)^{n-1}5^{n+1}$\\
