@@ -68,8 +68,8 @@ Indian Institute of Technology Hyderabad
 
 \bigskip
 
-\renewcommand{\thefigure}{\theenumi}
-\renewcommand{\thetable}{\theenumi}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
 
 
 \section{Question 11.9.1 (5)}
@@ -95,20 +95,17 @@ Indian Institute of Technology Hyderabad
 \end{table}
 
 
+On substituting n = 0, 1, 2, 3 and 4, we get the first five terms 
+
+Hence, the required terms are -5, 25, –125, 625, –3125 .
 
 
 The Z-transform of a sequence $x(n)$ is given by:
 
  \begin{align}
 	     x(n) &= (-1)^{n-1}5^{n+1}u(n)
-	       \\  X(Z) &= \dfrac{-5z}{z+5}; 
+	       \\  X(Z) &= \dfrac{-5z}{z+5}; ( |z| > 5 )
  \end{align}
-
-This result is valid for R.O.C. 
-\begin{align}
-|z| > 5
-\end{align}
-
 
 
 \begin{figure}
@@ -116,12 +113,6 @@ This result is valid for R.O.C.
   \includegraphics[width=0.5\textwidth]{figures/grasi2.png} 
  
 \end{figure}
-
-
-The $n^{th}$ term of sequence is: $x(n) = (-1)^{n-1}5^{n+1}$\\
-On substituting n = 0, 1, 2, 3 and 4, we get the first five terms 
-
-Hence, the required terms are -5, 25, –125, 625, –3125 .
 
 
 \end{document}
