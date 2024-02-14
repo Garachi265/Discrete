@@ -11,7 +11,7 @@ int main() {
 
     // Iterate over values of n from 0 to 4
     for (int n = 0; n <= 4; ++n) {
-        double term = pow(-1, n - 1) * pow(5, n + 1);
+        double term = pow(-1, n ) * pow(5, n + 2);
         fprintf(file, "%d %.2f\n", n, term);
     }
 

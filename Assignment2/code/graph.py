@@ -15,8 +15,8 @@ for line in data:
 # Plot the points
 plt.plot(x_values, y_values, marker='o', linestyle='-')
 plt.xlabel('n')
-plt.ylabel('x(n)')
-plt.title('Plot of x(n) = (-1)^(n-1) * 5^(n+1)')
+plt.ylabel('x[n]')
+plt.title('x(n) = (-1)^(n) * 5^(n+2)')
 plt.grid(True)
 plt.show()
 
